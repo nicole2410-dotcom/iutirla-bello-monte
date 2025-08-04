@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IUTIRLA - Sede Bello Monte</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background: #fdfdfd;
+      color: #333;
+    }
+
+    header {
+      background-color: #810000;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 80px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #a20000;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #610000;
+    }
+
+    .hero {
+      background-image: url("img/sede.jpg"); /* Reemplaza por tu imagen sede.jpg en carpeta img */
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 10px;
+      animation: fadeIn 1s ease-in;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #810000;
+      text-align: center;
+    }
+
+    .img-ejemplo {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .img-item {
+      text-align: center;
+      max-width: 220px;
+    }
+
+    .img-item img {
+      width: 220px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #a20000;
+      transition: transform 0.3s;
+    }
+
+    .img-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .img-item p {
+      margin: 8px 0 0;
+      font-weight: bold;
+      color: #810000;
+    }
+
+    footer {
+      background-color: #810000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    #btn-up {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #a20000;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    #btn-up:hover {
+      background: #610000;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .datos-contacto p {
+      line-height: 1.6;
+    }
+
+    .datos-contacto strong {
+      color: #a20000;
+    }
+
+    /* --- Aquí inicia el CSS que me pasaste --- */
+    .img-ejemplo .img-item {
+      text-align: center;
+    }
+
+    .img-ejemplo .img-item p {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #810000;
+    }
+
+    .frase-final {
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: 30px;
+      color: #800000;
+      opacity: 0;
+      animation: aparecer 2s ease-in forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* --- Fin del CSS extra --- */
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="img/logo.png" alt="Logo IUTIRLA" /> <!-- Asegúrate de guardar la imagen como img/logo.png -->
+    <h1>IUTIRLA - Sede Bello Monte</h1>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#carreras">Carreras</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <div class="hero" id="inicio">
+    ¡Bienvenido al IUTIRLA - Bello Monte!
+  </div>
+
+  <section id="nosotros">
+    <h2>¿Quiénes somos?</h2>
+    <p>La Sede Bello Monte del IUTIRLA forma parte de una red de excelencia académica comprometida con la formación de profesionales técnicos integrales. Actualmente, se imparte únicamente la carrera de Informática.</p>
+  </section>
+
+  <section id="carreras">
+    <h2>Carrera Técnica</h2>
+    <p>La carrera de Informática en la sede Bello Monte está orientada a formar profesionales altamente capacitados en programación, bases de datos, redes y desarrollo de software.</p>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería por Trimestre</h2>
+    <p style="text-align:center; max-width: 800px; margin: auto;">
+      En esta galería podrás ver a los grupos de estudiantes de la carrera de Informática que cursan actualmente en la sede Bello Monte del IUTIRLA. Cada trimestre refleja el esfuerzo, compañerismo y dedicación de quienes forman parte activa de nuestra comunidad universitaria. ¡Conoce a nuestros futuros profesionales!
+    </p>
+
+    <div class="img-ejemplo">
+      <div class="img-item">
+        <img src="img/trimestre1.jpg" alt="1er Trimestre">
+        <p>1er Trimestre</p>
+      </div>
+      <div class="img-item">
+        <img src="img/trimestre2.jpg" alt="2do Trimestre">
+        <p>2do Trimestre</p>
+      </div>
+      <div class="img-item">
+        <img src="img/trimestre3.jpg" alt="3er Trimestre">
+        <p>3er Trimestre</p>
+      </div>
+      <div class="img-item">
+        <img src="img/trimestre4.jpg" alt="4to Trimestre">
+        <p>4to Trimestre</p>
+      </div>
+      <div class="img-item">
+        <img src="img/trimestre5.jpg" alt="5to Trimestre">
+        <p>5to Trimestre</p>
+      </div>
+    </div>
+
+    <p class="frase-final">
+      Ellos son el presente y futuro de la informática en Venezuela.
+    </p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="datos-contacto">
+      <p><strong>📍 Dirección:</strong> Av. Leonardo Da Vinci, piso 1, Colinas de Bello Monte, Parroquia San Pablo, Municipio Baruta, Caracas.</p>
+      <p><strong>📞 Teléfonos:</strong> (0212) 753-2055 / (0412) 721-8003</p>
+      <p><strong>📧 Correo:</strong> controldeestudios.ccsbellom@iutirlaoficial.com</p>
+      <p><strong>📲 Pago Móvil:</strong><br>
+        Banco: Mercantil (0105)<br>
+        Teléfono: 0412-0259759<br>
+        RIF: J-00130751-6
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 IUTIRLA - Sede Bello Monte. Página desarrollada por estudiantes.</p>
+  </footer>
+
+  <button id="btn-up" title="Volver arriba">↑</button>
+
+  <script>
+    const btnUp = document.getElementById('btn-up');
+
+    window.onscroll = function () {
+      btnUp.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+
+    btnUp.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+</body>
+</html>
